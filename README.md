@@ -27,7 +27,7 @@ Me destaco por mi capacidad para identificar vulnerabilidades en la lógica de n
 | Categoría | Herramientas |
 | :--- | :--- |
 | **Gestión de Pruebas** | Jira |
-| **Documentación** | Confluence, Google Docs, Markdown |
+| **Documentación** | Google Docs, Markdown |
 | **API/Web Tools** | Postman, Chrome DevTools |
 | **Entorno de Pruebas** | Windows, Android/iOS |
 | **Navegadores** | Chrome, Firefox, Safari, Edge |
@@ -36,7 +36,7 @@ Me destaco por mi capacidad para identificar vulnerabilidades en la lógica de n
 
 ## 📂 Proyectos Destacados
 
-### 🛒 [AcademyBugs](URL-DE-TU-PROYECTO) – E-Commerce End-to-End Testing
+### 🛒 [AcademyBugs] – E-Commerce End-to-End Testing
 *   **Objetivo:** Auditoría completa de un flujo de compra en una tienda virtual.
 *   **Actividades:** 
     *   Diseño de +20 casos de prueba funcionales.
@@ -48,6 +48,6 @@ Me destaco por mi capacidad para identificar vulnerabilidades en la lógica de n
 
 ## 📫 Contacto
 
-*   **LinkedIn:** [://linkedin.com](https://www.linkedin.com) 
-*   **Email:** [tu-correo@ejemplo.com](mailto:tu-correo@ejemplo.com)
-*   **Credenciales:** [Ver Certificado ISTQB](URL-A-TU-CERTIFICADO)
+*   **LinkedIn:** [://linkedin.com](https://www.linkedin.com/in/arianrodriguezcast/) 
+*   **Email:** [tu-correo@ejemplo.com](arian4geeka@gmail.com)
+*   **Credenciales:** [Ver Certificado ISTQB](https://www.credly.com/badges/af3366cf-cb01-4a99-b65b-14bf3af2a733/public_url)
