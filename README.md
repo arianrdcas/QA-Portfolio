@@ -48,6 +48,6 @@ Me destaco por mi capacidad para identificar vulnerabilidades en la lógica de n
 
 ## 📫 Contacto
 
-*   **LinkedIn:** [://linkedin.com](https://www.linkedin.com/in/arianrodriguezcast/) 
-*   **Email:** [tu-correo@ejemplo.com](arian4geeka@gmail.com)
-*   **Credenciales:** [Ver Certificado ISTQB](https://www.credly.com/badges/af3366cf-cb01-4a99-b65b-14bf3af2a733/public_url)
+*   **LinkedIn:** [://www.linkedin.com/in/arianrodriguezcast/]
+*   **Email:** [arian4geeka@gmail.com]
+*   **Credenciales:** [://www.credly.com/badges/af3366cf-cb01-4a99-b65b-14bf3af2a733/public_url]
