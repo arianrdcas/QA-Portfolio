@@ -20,7 +20,8 @@ Antes de la ejecución formal, se realizó una sesión de 40 min centrada en la 
 *   **Precondición:** El usuario se encuentra en la página de un producto específico.
 *   **Pasos:**
     1. Click en el botón "Add to Cart".
-    2. Observar la notificación de confirmación y el contador del carrito.
+    2. Observar la notificación de confirmación.
+    3. Click en el botón "View Cart".
 *   **Resultado Esperado:** El producto debe aparecer en el carrito con el precio unitario correcto (46.00) mas valor del shipping(7.99), total (53.99).
 *   **Resultado Obtenido:** El producto aparece en el carrito con el precio total incorrecto (153.99). Ver **[BUG-001](../assets/bug-tc-001.PNG)**
 *   **Estado:** ❌ **FAIL**
