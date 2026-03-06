@@ -19,7 +19,7 @@ Antes de la ejecución formal, se realizó una sesión de 40 min centrada en la 
 
 ## 🧪 3. Detalle de Casos de Prueba y Resultados
 
-### TC-001 – Validar la lógica de cálculo del carrito
+### TC-001 – Agregar producto al carrito y validar cálculo del total
 
 - **Precondición:** El usuario se encuentra en la página de principal del E-Commerce ("https://academybugs.com/find-bugs/").
 - **Pasos:**
@@ -38,7 +38,7 @@ Antes de la ejecución formal, se realizó una sesión de 40 min centrada en la 
 
 ---
 
-### TC-002 – Actualizar cantidad (Lógica de Precio)
+### TC-002 – Actualizar cantidad de producto en carrito y validar cálculo del total
 
 - **Precondición:** El usuario se encuentra en la página de principal del E-Commerce ("https://academybugs.com/find-bugs/")..
 - **Pasos:**
