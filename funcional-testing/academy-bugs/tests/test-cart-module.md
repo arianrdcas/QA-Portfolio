@@ -23,9 +23,9 @@ Antes de la ejecución formal, se realizó una sesión de 40 min centrada en la 
 
 - **Precondición:** El usuario se encuentra en la página de principal del E-Commerce ("https://academybugs.com/find-bugs/").
 - **Pasos:**
-  1. Click en el botón "Add to Cart" del producto (Dark Grey Jeans).
+  1. Click en el botón **"Add to Cart**" del producto (Dark Grey Jeans).
   2. Observar la notificación de confirmación.
-  3. Click en el botón "View Cart".
+  3. Click en el botón **"View Cart"**.
   4. Validar que existe un producto en el carrito de compras.
 - **Resultado Esperado:** 
     -El carrito muestra:
@@ -42,13 +42,13 @@ Antes de la ejecución formal, se realizó una sesión de 40 min centrada en la 
 
 - **Precondición:** El usuario se encuentra en la página de principal del E-Commerce ("https://academybugs.com/find-bugs/")..
 - **Pasos:**
-  1. Click en el botón "Add to Cart" del producto (DNK Yellos Shoes)
+  1. Click en el botón **"Add to Cart"** del producto (DNK Yellos Shoes)
   2. Observar la notificación de confirmación.
-  3. Click en el botón "View Cart".
+  3. Click en el botón **"View Cart"**.
   4. Validar que existe un producto en el carrito de compras.
   5. Cambiar la cantidad del producto de **1** a **2**.
   6. Validar que tenemos 2 item del producto.
-  7. Presionar "Update".
+  7. Presionar **"Update"**.
 - **Resultado Esperado:**
 -El carrito muestra:
     -Subtotal (2 item) "DNK Yellow Shoes": $90.00
@@ -60,11 +60,15 @@ Antes de la ejecución formal, se realizó una sesión de 40 min centrada en la 
 
 ---
 
-### TC-003 – Validación de cantidad mínima (Boundary)
+### TC-003 – Validación de límites en cantidad de producto (Valores ≤ 0)
 
+- **Precondición**: El usuario tiene el producto "DNK Yellow Shoes" en el carrito y se encuentra en la pantalla de View Cart.
 - **Pasos:**
-  1. En el campo cantidad, intentar ingresar el valor **0**.
-  2. Intentar ingresar un valor negativo **-1**.
+ 1. Localizar el campo de entrada de cantidad (Input) del producto.
+ 2. Limpiar el valor actual e ingresar el valor **0**.
+ 3. Presionar el botón **"Update"**.
+ 4. Limpiar el campo e ingresar un valor negativo **(-1)**.
+ 5. Presionar el botón **"Update"**.
 - **Resultado Esperado:** El sistema debe resetear el valor a 1 o eliminar el producto tras una confirmación. Nunca permitir valores ≤ 0.
 - **Estado:** ✅ **PASS**
 
