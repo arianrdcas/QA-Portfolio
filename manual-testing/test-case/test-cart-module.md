@@ -23,10 +23,9 @@ Antes de la ejecución formal, se realizó una sesión de 40 min centrada en la 
 
 - **Precondición:** El usuario se encuentra en la página de principal del E-Commerce ("https://academybugs.com/find-bugs/").
 - **Pasos:**
-  1. Click en el botón **"Add to Cart**" del producto (Dark Grey Jeans).
+  1. Click en el botón **"Add to Cart**" del producto "Dark Grey Jeans".
   2. Observar la notificación de confirmación.
-  3. Click en el botón **"View Cart"**.
-  4. Validar que existe un producto en el carrito de compras.
+  3. Click en **View Cart**. / Resultado Esperado: Se visualiza el carrito con el producto añadido.
 - **Resultado Esperado:** 
     -El carrito muestra:
     -Subtotal (1 item) "Dark Grey Jeans": $46.00
@@ -42,13 +41,12 @@ Antes de la ejecución formal, se realizó una sesión de 40 min centrada en la 
 
 - **Precondición:** El usuario se encuentra en la página de principal del E-Commerce ("https://academybugs.com/find-bugs/")..
 - **Pasos:**
-  1. Click en el botón **"Add to Cart"** del producto (DNK Yellos Shoes)
+  1. Click en el botón **"Add to Cart"** del producto "DNK Yellow Shoes".
   2. Observar la notificación de confirmación.
-  3. Click en el botón **"View Cart"**.
-  4. Validar que existe un producto en el carrito de compras.
-  5. Cambiar la cantidad del producto de **1** a **2**.
-  6. Validar que tenemos 2 item del producto.
-  7. Presionar **"Update"**.
+  3. Click en **View Cart**. / Resultado Esperado: Se visualiza el carrito con el producto añadido.
+  4. Cambiar la cantidad del producto de **1** a **2**.
+  5. Validar que tenemos 2 item del producto.
+  6. Presionar **"Update"**.
 - **Resultado Esperado:**
 -El carrito muestra:
     -Subtotal (2 item) "DNK Yellow Shoes": $90.00
@@ -75,13 +73,16 @@ Antes de la ejecución formal, se realizó una sesión de 40 min centrada en la 
 ---
 
 ### TC-004 – Validar cálculo con múltiples ítems
-
+- **Precondición**: El usuario se encuentra en la página principal del E-Commerce.
 - **Pasos:**
-  1. Agregar Producto A ($45.00).
-  2. Agregar Producto B ($46.00).
-  3. Validar la suma total en el carrito.
-- **Resultado Esperado:** Total (sin considerar shipping) = $91.00.
-- **Resultado Obtenido:** El sistema muestra $198.99. Se sospecha de un error en la suma de variables tipo String. Ver **[BUG-004](../assets/bug-tc-004.PNG)**.
+  1. Click en el botón **Add to Cart** del producto "DNK Yellow Shoes" ($45.00).
+  2. Click en el botón **Add to Cart** del producto "Dark Grey Jeans" ($46.00).
+  3. Click en el botón **View Cart** (o navegar a la URL del carrito).
+  4. Localizar los subtotales de cada producto y el Total General en la tabla del carrito.
+- **Resultado Esperado:** 
+  - El sistema debe realizar la suma aritmética correcta de los precios unitarios.
+  - El campo Total (sin considerar envío) debe mostrar exactamente $91.00.
+- **Resultado Obtenido:** El sistema muestra $198.99. Se sospecha que el software añade un valor constante de $100.00 de forma incorrecta al cálculo final del carrito. Ver **[BUG-004](../assets/bug-tc-004.PNG)**.
 - **Estado:** ❌ **FAIL**
 
 ---
