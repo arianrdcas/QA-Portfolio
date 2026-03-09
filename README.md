@@ -16,7 +16,7 @@ Este repositorio contiene:
 - Automatización de pruebas con **Playwright**
 - Validación de lógica de negocio del carrito
 - Evidencias de ejecución mediante **screenshots**
-- 
+  
 ---
 
 # 🧪 Casos de Prueba Automatizados
@@ -32,6 +32,14 @@ Los resultados coinciden con los **tests manuales**, donde se detectó un error 
 
 ---
 
+# 📸 Evidencias
+
+Durante la ejecución se guardan screenshots automáticamente en:
+
+automation-testing/screenshot/
+
+---
+
 # 🛠️ Tecnologías Utilizadas
 
 - Node.js
@@ -41,9 +49,47 @@ Los resultados coinciden con los **tests manuales**, donde se detectó un error 
 
 ---
 
-# 📦 Instalación del Proyecto
+# 🚀 Mejoras Futuras
 
-## 1️⃣ Clonar el repositorio
+- Automatizar TC-003 (validación de valores negativos)
+- Automatizar TC-004 (múltiples ítems en carrito)
+- Implementar Page Object Model
+- Integrar CI/CD (GitHub Actions)
 
+---
+# ⚙️ Instalación y Ejecución
+
+Clonar el repositorio
 ```bash
-git clone https://github.com/tu-usuario/academybugs-playwright-tests.git
+git clone https://github.com/arianrdcas/QA-Portfolio.git
+ ```
+Entrar al proyecto:
+```bash
+cd automation-testing
+```
+Instalar dependencias:
+```bash
+npm install
+```
+Instalar navegadores de Playwright:
+```bash
+npx playwright install
+```
+Ejecutar todos los tests:
+```bash
+npx playwright test
+```
+Ejecutar con interfaz visual:
+```bash
+npx playwright test --ui
+```
+Ver reporte de resultados:
+```bash
+npx playwright show-report
+```
+
+# 👨‍💻 Autor
+
+**Arian Rodriguez**  
+QA Automation Engineer  
+Certified Manual QA Tester
