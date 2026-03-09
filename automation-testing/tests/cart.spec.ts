@@ -30,10 +30,10 @@ test.describe("Pruebas del Carrito de Compras", () => {
 
     const totalRealPrice = productPrice + shippingPrice;
 
-    await page.screenshot({
-      path: "screenshot/TC-001/TC-001.png",
-      fullPage: true,
-    });
+     await page.screenshot({
+       path: "screenshot/TC-001/TC-001.png",
+       fullPage: true,
+     });
 
     expect(totalPrice).toBeCloseTo(totalRealPrice);
   });
@@ -75,7 +75,7 @@ test.describe("Pruebas del Carrito de Compras", () => {
     await page.screenshot({
       path: "screenshot/TC-002/TC-002.png",
       fullPage: true,
-    }); // Pausing execution to inspect the UI
+    });
 
     expect(totalPrice).toBeCloseTo(totalRealPrice);
   });
