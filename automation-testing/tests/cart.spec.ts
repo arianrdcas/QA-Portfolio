@@ -31,7 +31,7 @@ test.describe("Pruebas del Carrito de Compras", () => {
     const totalRealPrice = productPrice + shippingPrice;
 
      await page.screenshot({
-       path: "screenshot/TC-001/TC-001.png",
+       path: "automation-testing/screenshot/TC-001/TC-001.png.png",
        fullPage: true,
      });
 
@@ -73,7 +73,7 @@ test.describe("Pruebas del Carrito de Compras", () => {
     const totalRealPrice = productPrice + shippingPrice;
 
     await page.screenshot({
-      path: "screenshot/TC-002/TC-002.png",
+      path: "automation-testing/screenshot/TC-002/TC-002.png",
       fullPage: true,
     });
 
