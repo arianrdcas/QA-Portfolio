@@ -19,7 +19,7 @@ Este repositorio contiene:
   
 ---
 
-# 🧪 Casos de pruebas (Manualew y Automatizados)
+# 🧪 Casos de pruebas (Manuales y Automatizados)
 
 Actualmente el proyecto automatiza los siguientes casos:
 
