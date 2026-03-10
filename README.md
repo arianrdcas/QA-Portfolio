@@ -12,7 +12,7 @@ El objetivo del proyecto es **automatizar casos de prueba manuales previamente d
 
 Este repositorio contiene:
 
-- Casos de prueba manuales documentados
+- Casos manuales detallados :[manual-testing/](manual-testing/)
 - Automatización de pruebas con **Playwright**
 - Validación de lógica de negocio del carrito
 - Evidencias de ejecución mediante **screenshots**
@@ -25,10 +25,11 @@ Actualmente el proyecto automatiza los siguientes casos:
 
 | ID | Caso de Prueba | Descripción | Estado |
 |---|---|---|---|
-| TC-001 | Agregar producto al carrito | Verifica que el total sea igual a subtotal + envío | ❌ FAIL (Bug conocido) |
-| TC-002 | Actualizar cantidad de producto | Valida el recalculo del total al modificar la cantidad | ❌ FAIL (Bug conocido) |
+| TC-001 | Agregar producto al carrito | Verifica que el total sea igual a subtotal + envío | FAIL (Bug conocido) |
+| TC-002 | Actualizar cantidad de producto | Valida el recàlculo del total al modificar la cantidad | FAIL (Bug conocido) |
 
-Resultados idénticos a los **tests manuales**, bug confirmado en la lógica de cálculo del carrito.
+**Nota importante**
+Los resultados coinciden exactamente con las ejecuciones manuales previas, confirmando un **bug real** en la lògica del càlculo del total del carrito (subtotal + envío,no se actualiza correctamente). Esto valida que los test detectan defectos de negocio.
 
 ---
 
