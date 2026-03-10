@@ -28,7 +28,7 @@ Actualmente el proyecto automatiza los siguientes casos:
 | TC-001 | Agregar producto al carrito | Verifica que el total sea igual a subtotal + envío | ❌ FAIL (Bug conocido) |
 | TC-002 | Actualizar cantidad de producto | Valida el recalculo del total al modificar la cantidad | ❌ FAIL (Bug conocido) |
 
-Los resultados coinciden con los **tests manuales**, donde se detectó un error en la lógica de cálculo del carrito.
+Resultados idénticos a los **tests manuales**, bug confirmado en la lógica de cálculo del carrito.
 
 ---
 
