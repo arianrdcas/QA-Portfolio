@@ -13,7 +13,7 @@ El objetivo del proyecto es **automatizar casos de prueba manuales previamente d
 Este repositorio contiene:
 
 - Casos manuales detallados:[manual-testing/](manual-testing/)
-- Automatización de pruebas con **Playwright** [automation-testing/](automtion-testing)
+- Automatización de pruebas con **Playwright**: [automation-testing/](automtion-testing/)
 - Validación de lógica de negocio del carrito
 - Evidencias de ejecución mediante **screenshots**
   
