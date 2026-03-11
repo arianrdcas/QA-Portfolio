@@ -72,7 +72,7 @@ Antes de la ejecución formal, se realizó una sesión de 40 min centrada en la 
 
 ---
 
-### TC-004 – Validar cálculo con múltiples ítems
+### TC-004 – Validar cálculo con múltiples productos
 - **Precondición**: El usuario se encuentra en la página principal del E-Commerce.
 - **Pasos:**
   1. Click en el botón **Add to Cart** del producto "DNK Yellow Shoes" ($45.00).
