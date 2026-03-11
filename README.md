@@ -1,53 +1,96 @@
-# 🧪 QA Portfolio – Arian Rodriguez Del Castillo
+# 🧪 QA Automation – Shopping Cart Tests (Playwright)
 
-> **QA Analyst | ISTQB® Certified Foundation Level**
-> Especializado en asegurar la calidad del software mediante un enfoque analítico, metodologías ágiles y una comunicación clara entre negocio y desarrollo.
+Proyecto de **automatización de pruebas E2E** utilizando **Playwright** para validar la lógica del carrito de compras del sitio de pruebas:
 
----
+https://academybugs.com/find-bugs/
 
-## 👨‍💻 Perfil Profesional
-
-Soy un apasionado de la calidad de software con experiencia en el ciclo de vida de pruebas (**STLC**). Mi enfoque principal es el **Testing Funcional**, donde me especializo en transformar requerimientos de negocio en casos de prueba detallados para garantizar productos robustos y libres de errores críticos.
-
-Me destaco por mi capacidad para identificar vulnerabilidades en la lógica de negocio y por redactar reportes de incidencia precisos que agilizan el tiempo de resolución del equipo de desarrollo.
+El objetivo del proyecto es **automatizar casos de prueba manuales previamente diseñados**, detectando errores en la **lógica de cálculo del total del carrito**.
 
 ---
 
-## 🔍 Áreas de Expertise
+# 📌 Descripción del Proyecto
 
-*   **Manual Testing:** Pruebas de Humo, Confirmación, Regresión y Exploratorias.
-*   **Test Design:** Creación de Planes de Prueba, Casos de Prueba y Matrices de Trazabilidad.
-*   **API Testing:** Verificación de endpoints y flujos de datos (Postman).
-*   **UX/UI Testing:** Validación de diseño responsive y accesibilidad básica.
+Este repositorio contiene:
+
+- Casos manuales detallados:[manual-testing/](manual-testing/)
+- Automatización de pruebas con **Playwright**:[automation-testing/](automation-testing/)
+- Validación de lógica de negocio del carrito
+- Evidencias de ejecución mediante **screenshots**
+  
+---
+
+# 🧪 Casos de pruebas (Manuales y Automatizados)
+
+Actualmente el proyecto automatiza los siguientes casos:
+
+| ID | Caso de Prueba | Descripción | Estado |
+|---|---|---|---|
+| TC-001 | Agregar producto al carrito | Verifica que el total sea igual a subtotal + envío | FAIL (Bug conocido) |
+| TC-002 | Actualizar cantidad de producto | Valida el recàlculo del total al modificar la cantidad | FAIL (Bug conocido) |
+
+**Nota importante**
+Los resultados coinciden exactamente con las ejecuciones manuales previas, confirmando un **bug real** en la lògica del càlculo del total del carrito (subtotal + envío,no se actualiza correctamente). Esto valida que los test detectan defectos de negocio.
 
 ---
 
-## 🛠 Tech Stack & Herramientas
+# 📸 Evidencias
 
-| Categoría | Herramientas |
-| :--- | :--- |
-| **Gestión de Pruebas** | Jira |
-| **Documentación** | Google Docs, Markdown |
-| **API/Web Tools** | Postman, Chrome DevTools |
-| **Entorno de Pruebas** | Windows, Android/iOS |
-| **Navegadores** | Chrome, Firefox, Safari, Edge |
+Durante la ejecución se guardan screenshots automáticamente en:
+
+automation-testing/screenshot/
 
 ---
 
-## 📂 Proyectos Destacados
+# 🛠️ Tecnologías Utilizadas
 
-### 🛒 [AcademyBugs] – E-Commerce End-to-End Testing
-*   **Objetivo:** Auditoría completa de un flujo de compra en una tienda virtual.
-*   **Actividades:** 
-    *   Diseño de +20 casos de prueba funcionales.
-    *   Ejecución de pruebas exploratorias detectando 5 bugs críticos de interfaz y lógica.
-    *   Reporte detallado en Jira con capturas y pasos de reproducción.
-*   **Herramientas:** Jira, DevTools, Lightshot.
+- Node.js
+- Playwright
+- TypeScript
+- Playwright Test Runner
 
 ---
 
-## 📫 Contacto
+# 🚀 Mejoras Futuras
 
-*   **LinkedIn:** [://www.linkedin.com/in/arianrodriguezcast/]
-*   **Email:** [arian4geeka@gmail.com]
-*   **Credenciales:** [://www.credly.com/badges/af3366cf-cb01-4a99-b65b-14bf3af2a733/public_url]
+- Automatizar TC-003 (validación de valores negativos)
+- Automatizar TC-004 (múltiples ítems en carrito)
+- Implementar Page Object Model
+- Integrar CI/CD (GitHub Actions)
+
+---
+# ⚙️ Instalación y Ejecución
+
+Clonar el repositorio
+```bash
+git clone https://github.com/arianrdcas/QA-Portfolio.git
+ ```
+Entrar al proyecto:
+```bash
+cd automation-testing
+```
+Instalar dependencias:
+```bash
+npm install
+```
+Instalar navegadores de Playwright:
+```bash
+npx playwright install
+```
+Ejecutar todos los tests:
+```bash
+npx playwright test
+```
+Ejecutar con interfaz visual:
+```bash
+npx playwright test --ui
+```
+Ver reporte de resultados:
+```bash
+npx playwright show-report
+```
+
+# 👨‍💻 Autor
+
+**Arian Rodriguez**  
+QA Automation Engineer  
+Certified Manual QA Tester
