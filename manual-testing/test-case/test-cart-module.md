@@ -26,13 +26,13 @@ Antes de la ejecución formal, se realizó una sesión de 40 min centrada en la 
 -**Prioridad:** Alta
 
 -**Precondiciones:** 
-    1.El usuario se encuentra en la página de principal del E-Commerce ("https://academybugs.com/find-bugs/").
+    1. El usuario se encuentra en la página de principal del E-Commerce ("https://academybugs.com/find-bugs/").
 
 -**Pasos:**
-    1. Hacer click en el botón **Add to Cart** del producto "Dark Grey Jeans".
-    2. Observar la notificación de confirmación.
-    3. Hacer click en **View Cart**. 
-    4. Verificar que el producto agregado se visualiza en el carrito.
+  1. Hacer click en el botón **Add to Cart** del producto "Dark Grey Jeans".
+  2. Observar la notificación de confirmación.
+  3. Hacer click en **View Cart**. 
+  4. Verificar que el producto agregado se visualiza en el carrito.
   
 -**Resultado Esperado:** 
     -El carrito muestra:
