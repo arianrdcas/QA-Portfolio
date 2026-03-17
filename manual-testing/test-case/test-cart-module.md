@@ -59,8 +59,12 @@ Antes de la ejecución formal, se realizó una sesión de 40 min centrada en la 
 ---
 
 ### TC-003 – Validación de límites en cantidad de producto (Valores ≤ 0)
+- **Precondición**:
+1. El usuario tiene el producto "DNK Yellow Shoes" agregado al carrito.
+2. El usuario se encuentra en la pantalla View Cart.
+3. El campo de cantidad es editable.
 
-- **Precondición**: El usuario tiene el producto "DNK Yellow Shoes" en el carrito y se encuentra en la pantalla de View Cart.
+Datos de prueba:
 - **Pasos:**
  1. Localizar el campo de entrada de cantidad (Input) del producto.
  2. Limpiar el valor actual e ingresar el valor **0**.
