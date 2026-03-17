@@ -35,14 +35,14 @@ Antes de la ejecución formal, se realizó una sesión de 40 min centrada en la 
   4. Verificar que el producto agregado se visualiza en el carrito.
   
 -**Resultado Esperado:** 
-    -El carrito muestra:
-    -Subtotal (1 item) "Dark Grey Jeans": $46.00
-    -Costo de envio: $7.99
-    -Total general: $53.99
-    -El total debe ser igual a la suma del subtotal + Costo de envio: 53.99.
+  -El carrito muestra:
+  -Subtotal (1 item) "Dark Grey Jeans": $46.00
+  -Costo de envio: $7.99
+  -Total general: $53.99
+  -El total debe ser igual a la suma del subtotal + Costo de envio: 53.99.
 
 -**Resultado Obtenido:** 
-    -El sistema muestra un total incorrecto de $153.99. 
+  -El sistema muestra un total incorrecto de $153.99. 
 
 -**Ver evidencia:**[BUG-001](../assets/bug-tc-001.PNG)**
 
