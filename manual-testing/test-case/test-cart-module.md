@@ -21,7 +21,12 @@ Antes de la ejecución formal, se realizó una sesión de 40 min centrada en la 
 
 ### TC-001 – Agregar producto al carrito y validar cálculo del total
 
-- **Precondición:** El usuario se encuentra en la página de principal del E-Commerce ("https://academybugs.com/find-bugs/").
+-**Módulo:** Carrito de compras
+-**Tipo de prueba:** Funcional / Boundary Value Analysis (BVA)
+-**Prioridad:** Alta
+
+- **Precondición:** 
+1.El usuario se encuentra en la página de principal del E-Commerce ("https://academybugs.com/find-bugs/").
 - **Pasos:**
   1. Click en el botón **"Add to Cart**" del producto "Dark Grey Jeans".
   2. Observar la notificación de confirmación.
@@ -39,7 +44,12 @@ Antes de la ejecución formal, se realizó una sesión de 40 min centrada en la 
 
 ### TC-002 – Actualizar cantidad de producto en carrito y validar cálculo del total
 
-- **Precondición:** El usuario se encuentra en la página de principal del E-Commerce ("https://academybugs.com/find-bugs/")..
+-**Módulo:** Carrito de compras
+-**Tipo de prueba:** Funcional 
+-**Prioridad:** Alta
+
+- **Precondición:** 
+1.El usuario se encuentra en la página de principal del E-Commerce ("https://academybugs.com/find-bugs/")..
 - **Pasos:**
   1. Click en el botón **"Add to Cart"** del producto "DNK Yellow Shoes".
   2. Observar la notificación de confirmación.
@@ -58,26 +68,46 @@ Antes de la ejecución formal, se realizó una sesión de 40 min centrada en la 
 
 ---
 
-### TC-003 – Validación de límites en cantidad de producto (Valores ≤ 0)
+### TC-003 – Validación de límites en cantidad de producto (Valores ≤ 0 y valores válidos)
+
 - **Precondición**:
 1. El usuario tiene el producto "DNK Yellow Shoes" agregado al carrito.
 2. El usuario se encuentra en la pantalla View Cart.
 3. El campo de cantidad es editable.
 
-Datos de prueba:
+-**Datos de prueba:**
+### Datos de prueba:
+
+| Tipo                        | Valor |
+|-----------------------------|-------|
+| Límite inferior inválido    | 0     |
+| Límite inferior válido      | 1     |
+| Valor negativo inválido     | -5    |
+| Valor válido dentro del rango | 10    |
+
 - **Pasos:**
  1. Localizar el campo de entrada de cantidad (Input) del producto.
- 2. Limpiar el valor actual e ingresar el valor **0**.
+ 2.
+| # | Paso | Input | Clasificación | Resultado Esperado |
+|---|------|------|--------------|-------------------|
+| 1 | Ingresar valor límite inferior inválido en el campo de cantidad | 0 | Límite (Inválido) | El sistema muestra un mensaje de error o ajusta automáticamente el valor a 1. No debe permitir el valor 0. |
+| 2 | Ingresar valor límite inferior válido | 1 | Límite (Válido) | El sistema acepta el valor y actualiza correctamente el carrito y el total. |
+| 3 | Ingresar un valor negativo | -5 | Partición inválida | El sistema bloquea el valor, muestra error o lo convierte a un valor válido (≥1). |
+| 4 | Ingresar un valor válido dentro del rango | 10 | Partición válida | El sistema actualiza correctamente la cantidad y recalcula el total sin errores. |
  3. Presionar el botón **"Update"**.
- 4. Limpiar el campo e ingresar un valor negativo **(-1)**.
- 5. Presionar el botón **"Update"**.
 - **Resultado Esperado:** El sistema debe resetear el valor a 1 o eliminar el producto tras una confirmación. Nunca permitir valores ≤ 0.
 - **Estado:** ✅ **PASS**
 
 ---
 
 ### TC-004 – Validar cálculo con múltiples productos
-- **Precondición**: El usuario se encuentra en la página principal del E-Commerce.
+
+-**Módulo:** Carrito de compras
+-**Tipo de prueba:** Funcional 
+-**Prioridad:** Alta
+
+- **Precondición**: 
+1.El usuario se encuentra en la página principal del E-Commerce.
 - **Pasos:**
   1. Click en el botón **Add to Cart** del producto "DNK Yellow Shoes" ($45.00).
   2. Click en el botón **Add to Cart** del producto "Dark Grey Jeans" ($46.00).
