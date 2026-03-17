@@ -70,32 +70,41 @@ Antes de la ejecución formal, se realizó una sesión de 40 min centrada en la 
 
 ### TC-003 – Validación de límites en cantidad de producto (Valores ≤ 0 y valores válidos)
 
-- **Precondición**:
+**Módulo:** Carrito de compras  
+**Tipo de prueba:** Funcional  
+**Prioridad:** Alta  
+
+### Precondiciones:
 1. El usuario tiene el producto "DNK Yellow Shoes" agregado al carrito.
-2. El usuario se encuentra en la pantalla View Cart.
+2. El usuario se encuentra en la pantalla **View Cart**.
 3. El campo de cantidad es editable.
 
-**-Datos de prueba:**
+### Datos de prueba:
 
-| Tipo                        | Valor |
-|-----------------------------|-------|
-| Límite inferior inválido    | 0     |
-| Límite inferior válido      | 1     |
-| Valor negativo inválido     | -5    |
-| Valor válido dentro del rango | 10    |
+| Tipo                          | Valor |
+|-------------------------------|-------|
+| Valor negativo inválido       | -5    |
+| Límite inferior inválido      | 0     |
+| Límite inferior válido        | 1     |
+| Límite superior válido        | 2     |
+| Límite superior inválido      | 3     |
 
-**-Pasos:**
- 1. Localizar el campo de entrada de cantidad (Input) del producto.
- 2.
-| # | Paso | Input | Clasificación | Resultado Esperado |
-|---|------|------|--------------|-------------------|
-| 1 | Ingresar valor límite inferior inválido en el campo de cantidad | 0 | Límite (Inválido) | El sistema muestra un mensaje de error o ajusta automáticamente el valor a 1. No debe permitir el valor 0. |
-| 2 | Ingresar valor límite inferior válido | 1 | Límite (Válido) | El sistema acepta el valor y actualiza correctamente el carrito y el total. |
-| 3 | Ingresar un valor negativo | -5 | Partición inválida | El sistema bloquea el valor, muestra error o lo convierte a un valor válido (≥1). |
-| 4 | Ingresar un valor válido dentro del rango | 10 | Partición válida | El sistema actualiza correctamente la cantidad y recalcula el total sin errores. |
- 3. Presionar el botón **"Update"**.
-- **Resultado Esperado:** El sistema debe resetear el valor a 1 o eliminar el producto tras una confirmación. Nunca permitir valores ≤ 0.
-- **Estado:** ✅ **PASS**
+### Pasos de ejecución y resultados esperados:
+
+| # | Paso | Input | Clasificación | Resultado Esperado | Estado |
+|---|------|------|--------------|-------------------|--------|
+| 1 | Ingresar valor en el campo de cantidad y presionar "Update" | -5 | Partición inválida | El sistema ajusta automáticamente el valor a 1. No debe permitir valores negativos. | Pass |
+| 2 | Ingresar valor en el campo de cantidad y presionar "Update" | 0 | Límite inferior (Inválido) | El sistema ajusta automáticamente el valor a 1. No debe permitir el valor 0. | Pass |
+| 3 | Ingresar valor en el campo de cantidad y presionar "Update" | 1 | Límite inferior (Válido) | El sistema acepta el valor y actualiza correctamente el carrito y el total. | Pass |
+| 4 | Ingresar valor en el campo de cantidad y presionar "Update" | 2 | Límite superior (Válido) | El sistema acepta el valor y actualiza correctamente el carrito y el total. | Pass |
+| 5 | Ingresar valor en el campo de cantidad y presionar "Update" | 3 | Límite superior (Inválido) | El sistema no debe permitir valores mayores a 2 y ajusta automáticamente el valor al máximo permitido (2). | Pass |
+
+### Observación:
+Se detecta que el sistema limita la cantidad máxima a 2 unidades. 
+Este comportamiento no está documentado en requerimientos, por lo que se recomienda validarlo con el equipo de negocio.
+
+### Estado:
+Ejecutado
 
 ---
 
