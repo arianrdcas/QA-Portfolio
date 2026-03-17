@@ -75,8 +75,7 @@ Antes de la ejecución formal, se realizó una sesión de 40 min centrada en la 
 2. El usuario se encuentra en la pantalla View Cart.
 3. El campo de cantidad es editable.
 
--**Datos de prueba:**
-### Datos de prueba:
+**-Datos de prueba:**
 
 | Tipo                        | Valor |
 |-----------------------------|-------|
@@ -85,7 +84,7 @@ Antes de la ejecución formal, se realizó una sesión de 40 min centrada en la 
 | Valor negativo inválido     | -5    |
 | Valor válido dentro del rango | 10    |
 
-- **Pasos:**
+**-Pasos:**
  1. Localizar el campo de entrada de cantidad (Input) del producto.
  2.
 | # | Paso | Input | Clasificación | Resultado Esperado |
