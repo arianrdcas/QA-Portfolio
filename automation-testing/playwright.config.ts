@@ -25,7 +25,7 @@ export default defineConfig({
   reporter: "html",
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    headless: false,
+    headless: process.env.CI ? true : false,
     //screenshot: "only-on-failure", // Toma captura automáticamente si el test falla
     //video: "retain-on-failure",
     /* Base URL to use in actions like `await page.goto('')`. */
