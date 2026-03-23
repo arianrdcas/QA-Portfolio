@@ -52,10 +52,8 @@ automation-testing/screenshot/
 
 # 🚀 Mejoras Futuras
 
-- Automatizar TC-003 (validación de valores negativos)
 - Automatizar TC-004 (múltiples ítems en carrito)
 - Implementar Page Object Model
-- Integrar CI/CD (GitHub Actions)
 
 ---
 # ⚙️ Instalación y Ejecución
