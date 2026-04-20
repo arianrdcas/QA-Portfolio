@@ -51,7 +51,7 @@ Antes de la ejecución formal, se realizó una sesión de 40 min centrada en la 
 
 ---
 
-### TC-002 – Actualizar cantidad de producto en carrito y validar cálculo del total
+### TC-002 – Actualizar cantidad de producto en carrito y validar el recálculo del total
 
 -**Módulo:** Carrito de compras
 -**Tipo de prueba:** Funcional 
@@ -124,6 +124,8 @@ Antes de la ejecución formal, se realizó una sesión de 40 min centrada en la 
 -**Estado:**
     -Ejecutado
 
+-**Estado:** 
+    ✅ **PASS**
 ---
 
 ### TC-004 – Validar cálculo con múltiples productos

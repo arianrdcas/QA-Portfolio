@@ -1,0 +1,23 @@
+[
+  { "numero": "-5", "esperado": "1", "clasificacion": "Partición inválida" },
+  {
+    "numero": "0",
+    "esperado": "1",
+    "clasificacion": "Límite inferior (Inválido)"
+  },
+  {
+    "numero": "1",
+    "esperado": "1",
+    "clasificacion": "Límite inferior (Válido)"
+  },
+  {
+    "numero": "2",
+    "esperado": "2",
+    "clasificacion": "Límite superior (Válido)"
+  },
+  {
+    "numero": "3",
+    "esperado": "2",
+    "clasificacion": "Límite superior (Inválido)"
+  }
+]

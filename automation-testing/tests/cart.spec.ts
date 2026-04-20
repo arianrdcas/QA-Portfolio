@@ -1,5 +1,6 @@
 import { test, expect } from "@playwright/test";
 import { parsePrice, parsePriceTC4 } from "../utils/priceUtils";
+import datos from "../utils/data_pruebas.json";
 
 test.describe("Pruebas del Carrito de Compras", () => {
   test.beforeEach(async ({ page }) => {
@@ -81,6 +82,31 @@ test.describe("Pruebas del Carrito de Compras", () => {
 
     expect(totalPrice).toBeCloseTo(totalRealPrice);
   });
+
+  for (const caso of datos){
+    test(`TC-003 Validación de límites en cantidad: ${caso.numero} (${caso.clasificacion})`, async ({
+      page,
+    }) => {
+      await page.locator("#ec_add_to_cart_5").click();
+      await page.waitForSelector(
+        "text=Product successfully added to your cart",
+      );
+      await page.getByRole("link", { name: "View Cart" }).click();
+      await expect(page.locator(".ec_cartitem_title")).toContainText(
+        "DNK Yellow Shoes",
+      );
+
+      const input = page.locator("input.ec_quantity");
+      await input.first().fill(caso.numero);
+      await page.waitForTimeout(2000);
+
+      await page.getByText("UPDATE").click();
+      await page.waitForTimeout(2000);
+
+      await expect(input.first()).toHaveValue(caso.esperado);
+    });
+  }
+    
 
   test("TC-004 Validar calculo con multiples productos", async ({ page }) => {
     //test.fail(true, "Known bug: incorrect cart total calculation");
