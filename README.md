@@ -27,7 +27,7 @@ Actualmente el proyecto automatiza los siguientes casos:
 |---|---|---|---|
 | TC-001 | Agregar producto al carrito | Verifica que el total sea igual a subtotal + envío | FAIL (Bug conocido) |
 | TC-002 | Actualizar cantidad de productos | Valida el recàlculo del total al modificar la cantidad | FAIL (Bug conocido) |
-| TC-003 | Validación de límites en cantidad de producto | Valida valor limites | PASS |
+| TC-003 | Validación de límites en cantidad de producto | Valida valores limites | PASS |
 | TC-004 |  Validar cálculo con múltiples productos | Valida càlculo del total al agregar diferentes productos | FAIL (Bug conocido) |
 
 **Nota importante**
