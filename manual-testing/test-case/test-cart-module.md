@@ -123,7 +123,7 @@ Antes de la ejecución formal, se realizó una sesión de 40 min centrada en la 
 
 
 -**Estado:** 
-    - ✅ **PASS**
+    ✅ **PASS**
 ---
 
 ### TC-004 – Validar cálculo con múltiples productos
