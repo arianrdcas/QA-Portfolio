@@ -21,9 +21,9 @@ Antes de la ejecución formal, se realizó una sesión de 40 min centrada en la 
 
 ### TC-001 – Agregar producto al carrito y validar cálculo del total
 
--**Módulo:** Carrito de compras
--**Tipo de prueba:** Funcional / Boundary Value Analysis (BVA)
--**Prioridad:** Alta
+-**Módulo:** Carrito de compras  
+-**Tipo de prueba:** Funcional  
+-**Prioridad:** Alta 
 
 -**Precondiciones:** 
     1. El usuario se encuentra en la página de principal del E-Commerce ("https://academybugs.com/find-bugs/").
@@ -53,9 +53,9 @@ Antes de la ejecución formal, se realizó una sesión de 40 min centrada en la 
 
 ### TC-002 – Actualizar cantidad de producto en carrito y validar el recálculo del total
 
--**Módulo:** Carrito de compras
--**Tipo de prueba:** Funcional 
--**Prioridad:** Alta
+-**Módulo:** Carrito de compras  
+-**Tipo de prueba:** Funcional  
+-**Prioridad:** Alta 
 
 -**Precondiciones:** 
     1. El usuario se encuentra en la página de principal del E-Commerce ("https://academybugs.com/find-bugs/").
@@ -128,9 +128,9 @@ Antes de la ejecución formal, se realizó una sesión de 40 min centrada en la 
 
 ### TC-004 – Validar cálculo con múltiples productos
 
--**Módulo:** Carrito de compras
--**Tipo de prueba:** Funcional 
--**Prioridad:** Alta
+-**Módulo:** Carrito de compras  
+-**Tipo de prueba:** Funcional  
+-**Prioridad:** Alta 
 
 -**Precondiciones**: 
     1.El usuario se encuentra en la página principal del E-Commerce.
