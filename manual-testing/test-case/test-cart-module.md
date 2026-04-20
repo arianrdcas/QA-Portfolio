@@ -121,9 +121,9 @@ Antes de la ejecución formal, se realizó una sesión de 40 min centrada en la 
     -Se detecta que el sistema limita la cantidad máxima a 2 unidades. 
     -Este comportamiento no está documentado en requerimientos, por lo que se recomienda validarlo con el equipo de negocio.
 
-
 -**Estado:** 
     ✅ **PASS**
+
 ---
 
 ### TC-004 – Validar cálculo con múltiples productos
