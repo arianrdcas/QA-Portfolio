@@ -91,5 +91,5 @@ npx playwright show-report
 # 👨‍💻 Autor
 
 **Arian Rodriguez**  
-QA Automation Engineer  
+QA Automation   
 Certified Manual QA Tester
