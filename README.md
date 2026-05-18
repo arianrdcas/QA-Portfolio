@@ -26,7 +26,7 @@ El proyecto no solo ejecuta scripts, sino que sigue una estructura profesional b
 
 - **Page Object Model (POM):** Se ha implementado este patrón para separar los selectores y la lógica de interacción de las páginas (`ShopPage`, `CartPage`) de los tests, garantizando un código limpio y mantenible.
 - **Data-Driven Testing (DDT):** Utilización de archivos JSON externos para alimentar las pruebas. Esto permite ejecutar múltiples iteraciones con un solo script.
-- **Análisis de Valores Límite:** Aplicado en el **TC-003**, donde se validan entradas críticas como **-5, 0, 1, 2 y 3** [1], permitiendo verificar el comportamiento del sistema ante particiones equivalentes válidas e inválidas de forma dinámica.
+- **Análisis de Valores Límite:** Aplicado en el **TC-003**, donde se validan entradas críticas como **-5, 0, 1, 2 y 3**, permitiendo verificar el comportamiento del sistema ante particiones equivalentes válidas e inválidas de forma dinámica.
 - **Utilidades Desacopladas:** Uso de helpers para la limpieza de datos (precios y strings), mejorando la legibilidad de las aserciones.
 
 ---
