@@ -1,6 +1,6 @@
 # 🧪 QA Automation – Shopping Cart Tests (Playwright)
 
-Proyecto de **automatización de pruebas E2E** utilizando **Playwright** para validar la lógica del carrito de compras del sitio de pruebas:
+Proyecto de **automatización de pruebas** utilizando **Playwright** para validar la lógica del carrito de compras del sitio de pruebas:
 
 https://academybugs.com/find-bugs/
 
@@ -14,9 +14,21 @@ Este repositorio contiene:
 
 - Casos manuales detallados: [manual-testing/](manual-testing/)
 - Automatización de pruebas con **Playwright**: [automation-testing/](automation-testing/)
+- Implementación de **DDT (Data-Driven Testing)** para ejecutar flujos con múltiples combinaciones de datos (valores límite).
 - Validación de lógica de negocio del carrito
 - Evidencias de ejecución mediante **screenshots**
   
+---
+
+# 🏗️ Arquitectura y Patrones
+
+El proyecto no solo ejecuta scripts, sino que sigue una estructura profesional basada en:
+
+- **Page Object Model (POM):** Se ha implementado este patrón para separar los selectores y la lógica de interacción de las páginas (`ShopPage`, `CartPage`) de los tests, garantizando un código limpio y mantenible.
+- **Data-Driven Testing (DDT):** Utilización de archivos JSON externos para alimentar las pruebas. Esto permite ejecutar múltiples iteraciones con un solo script.
+- **Análisis de Valores Límite:** Aplicado en el **TC-003**, donde se validan entradas críticas como **-5, 0, 1, 2 y 3** [1], permitiendo verificar el comportamiento del sistema ante particiones equivalentes válidas e inválidas de forma dinámica.
+- **Utilidades Desacopladas:** Uso de helpers para la limpieza de datos (precios y strings), mejorando la legibilidad de las aserciones.
+
 ---
 
 # 🧪 Casos de pruebas (Manuales y Automatizados)
@@ -43,18 +55,21 @@ Durante la ejecución se guardan screenshots automáticamente en: [automation-te
 
 # 🛠️ Tecnologías Utilizadas
 
-- Node.js
-- Playwright
-- TypeScript
-- Playwright Test Runner
+- **Lenguaje:** TypeScript
+- **Framework de Pruebas:** Playwright
+- **Motor de Ejecución:** Playwright Test Runner
+- **Entorno:** Node.js
+- **CI/CD:** GitHub Actions
 
 ---
 
 # 🚀 Mejoras Futuras
 
-- Implementar Page Object Model
+- Incorporar pruebas de servicios backend (**API Testing**) para validar las respuestas del servidor.
+- Integrar **consultas SQL** para la validación y consistencia de datos directamente en la base de datos (Backend Testing).
 
 ---
+
 # ⚙️ Instalación y Ejecución
 
 Clonar el repositorio
