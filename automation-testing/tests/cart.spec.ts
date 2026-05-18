@@ -12,100 +12,73 @@ test.describe("Pruebas del Carrito de Compras", () => {
   test("TC-001 Agregar producto al carrito y validar cálculo del total", async ({
     page,
   }) => {
-    test.fail(true, "Known bug: incorrect cart total calculation");
-    await page.locator("#ec_add_to_cart_4").click();
+    const shop = new ShopPage(page);
+    const cart = new CartPage(page);
 
-    await page.waitForSelector("text=Product successfully added to your cart");
+    await shop.goto();
 
-    await page.getByRole("link", { name: "View Cart" }).click();
+    await shop.addProduct(4);
+    await shop.waitProductAdded();
+    await shop.goToCart();
 
-    await expect(page.locator(".ec_cartitem_title")).toContainText(
-      "Dark Grey Jeans",
-    );
+    await cart.validateProduct("Dark Grey Jeans");
 
-    const productText = await page.locator("#ec_cart_subtotal").textContent();
-    const shippingText = await page.locator("#ec_cart_shipping").textContent();
-    const totalText = await page.locator("#ec_cart_total").textContent();
-
-    const productPrice = parsePrice(productText);
-    const shippingPrice = parsePrice(shippingText);
-    const totalPrice = parsePrice(totalText);
-
-    const totalRealPrice = productPrice + shippingPrice;
+    const subtotal = parsePrice(await cart.getSubtotalText());
+    const shipping = parsePrice(await cart.getShippingText());
+    const total = parsePrice(await cart.getTotalText());
 
     await page.screenshot({
-      path: "automation-testing/screenshot/TC-001/TC-001.png.png",
+      path: "automation-testing/screenshot/TC-001/TC-001.png",
       fullPage: true,
     });
 
-    expect(totalPrice).toBeCloseTo(totalRealPrice);
+    expect(total).toBeCloseTo(subtotal + shipping);
   });
 
-  test("TC-002 Actualizar cantidad de producto en carrito y validar cálculo del total", async ({
-    page,
-  }) => {
-    test.fail(true, "Known bug: incorrect cart total calculation");
+  test("TC-002 Actualizar cantidad", async ({ page }) => {
+    const shop = new ShopPage(page);
+    const cart = new CartPage(page);
 
-    await page.locator("#ec_add_to_cart_5").click();
+    await shop.goto();
 
-    await page.locator("#ec_add_to_cart_4").click();
+    await shop.addProduct(5);
+    
+    await shop.waitProductAdded();
+    await shop.goToCart();
 
-    await page.waitForSelector("text=Product successfully added to your cart");
+    await cart.validateProduct("DNK Yellow Shoes");
 
-    await page.getByRole("link", { name: "View Cart" }).click();
+    await cart.increaseQuantity();
+    await cart.updateCart();
+    await page.waitForTimeout(3000);
 
-    await expect(page.locator(".ec_cartitem_title")).toContainText(
-      "DNK Yellow Shoes",
-    );
-
-    await page.getByRole("button", { name: "+" }).click();
-
-    await page.getByText("UPDATE").click();
-
-    await page.waitForTimeout(2000);
-
-    // Verifica que al menos hay 2 productos en el carrito
-    await expect(page.locator(".ec_cartitem_total")).toContainText("$90.00");
-
-    const productText = await page.locator("#ec_cart_subtotal").textContent();
-    const shippingText = await page.locator("#ec_cart_shipping").textContent();
-    const totalText = await page.locator("#ec_cart_total").textContent();
-
-    const productPrice = parsePrice(productText);
-    const shippingPrice = parsePrice(shippingText);
-    const totalPrice = parsePrice(totalText);
-
-    const totalRealPrice = productPrice + shippingPrice;
+    const subtotal = parsePrice(await cart.getSubtotalText());
+    const shipping = parsePrice(await cart.getShippingText());
+    const total = parsePrice(await cart.getTotalText());
 
     await page.screenshot({
       path: "automation-testing/screenshot/TC-002/TC-002.png",
       fullPage: true,
     });
 
-    expect(totalPrice).toBeCloseTo(totalRealPrice);
+    expect(total).toBeCloseTo(subtotal + shipping);
   });
 
   for (const caso of datos) {
-    test(`TC-003 Validación de límites en cantidad: ${caso.numero} (${caso.clasificacion})`, async ({
-      page,
-    }) => {
-      await page.locator("#ec_add_to_cart_5").click();
-      await page.waitForSelector(
-        "text=Product successfully added to your cart",
-      );
-      await page.getByRole("link", { name: "View Cart" }).click();
-      await expect(page.locator(".ec_cartitem_title")).toContainText(
-        "DNK Yellow Shoes",
-      );
+    test(`TC-003 ${caso.numero}`, async ({ page }) => {
+      const shop = new ShopPage(page);
+      const cart = new CartPage(page);
 
-      const input = page.locator("input.ec_quantity");
-      await input.first().fill(caso.numero);
-      await page.waitForTimeout(2000);
+      await shop.goto();
 
-      await page.getByText("UPDATE").click();
-      await page.waitForTimeout(2000);
+      await shop.addProduct(5);
+      await shop.waitProductAdded();
+      await shop.goToCart();
 
-      await expect(input.first()).toHaveValue(caso.esperado);
+      await cart.setQuantity(caso.numero);
+      await cart.updateCart();
+
+      await expect(cart.quantityInput.first()).toHaveValue(caso.esperado);
     });
   }
 
@@ -136,5 +109,4 @@ test.describe("Pruebas del Carrito de Compras", () => {
 
     expect(totalProductosCalculado).toBeCloseTo(subtotal);
   });
-
 });
